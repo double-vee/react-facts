@@ -1,13 +1,101 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --darker: #21222a;
+  --dark: #282d35;
+  --text: #fff;
+  --logo: #61dafb;
+  --nav-link: #deebf8;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  background-color: var(--dark);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  height: 90px;
+  padding: 1.8rem 1.5rem;
+  background-color: var(--darker);
+}
+
+.nav__icon {
+  width: 30px;
+  margin-right: 0.5rem;
+}
+
+.nav__logo_text {
+  margin-right: auto;
+  padding-right: 0.85rem;
+  color: var(--logo);
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+}
+
+.nav__title {
+  color: var(--nav-link);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 3.6rem 1.5rem;
+  background-image: url("./assets/reactjs-icon_2.svg");
+  background-repeat: no-repeat;
+  background-position: right 75%;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.main__title {
+  padding-bottom: 2.4rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+}
+
+.main__facts {
+  max-width: 400px;
+  padding-left: 2.8rem;
+}
+
+.main__facts li {
+  margin-bottom: 0.5rem;
+}
+
+.main__facts li::marker {
+  color: var(--logo);
+  font-size: 1.6rem;
+}
+
+.footer {
+  margin-top: auto;
+  padding: 1.5rem;
+  background-color: var(--darker);
+  color: var(--nav-link);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  text-align: center;
 }
