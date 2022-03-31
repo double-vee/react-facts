@@ -1,4 +1,4 @@
-import logo from "../assets/reactjs-icon.svg";
+import logo from "../assets/reactjs-icon_small.svg";
 
 function Header({ toggle }) {
   return (
